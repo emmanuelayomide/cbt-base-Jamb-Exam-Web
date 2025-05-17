@@ -1,0 +1,1167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #USED_COLOR{
+    color: #004225
+    #F5F5DC
+    #FFB000
+    #FFCF9D
+    ;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+   
+  }
+  
+  .navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  }
+  
+
+  .logo {
+    font-weight: bold;
+    color: darkgreen;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  
+  }
+  .close-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: darkgreen;
+    cursor: pointer;
+  }
+  .menuList{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+ 
+  .menuList a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: darkgreen;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .menuList a:hover{
+    color: #FFB000;
+  }
+  .auth-buttons button{
+    background-color: darkgreen;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .auth-buttons button:hover{
+    background-color: #FFB000;
+  }
+ 
+/* end of button flrx */
+
+  /* info designs */
+ 
+  #centeralized{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+   
+  }
+  #btnflex{
+    display: flex;
+    gap: 20px;
+  }
+  .btn-primary{
+    color: #fff;
+    background-color: darkgreen;
+    outline: none;
+    border-radius: 0px;
+    border: none;
+  }
+  .btn-primary:hover{
+    color: #fff;
+   background-color: #FFB000;
+  }
+  .btn-light{
+    color:darkgreen;
+    font-weight: 700;
+  }
+  .btn-light:hover{
+    background-color: #FFB000;
+  }
+
+.jambinfo{
+    margin-top: 15px;
+}
+  .jambinfo h1{
+    font-weight: 600;
+    letter-spacing: 5px;
+    
+
+  }
+  .jambinfo p{
+    letter-spacing: 2px;
+  }
+  .colorAdd{
+    color: darkgreen;
+  }
+/* End of infos  */
+
+/* caurosel Design */
+.carousel-inner img{
+    width: 1100px;
+    border-radius: 5px;
+  }
+
+
+/* end of caurosel */
+
+/* score list  */
+.score{
+    margin-top: 15px;
+   max-width: 1200px;
+}
+.score h2{
+   margin-bottom: 20px;
+   font-weight: 600;
+   letter-spacing: 3px;
+  }
+  
+.scoreContainer{
+  background-color:#fff;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  flex:1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+  padding: 10px;
+  height: 250px;
+ 
+
+}
+.top{
+margin-top: 25px;
+margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.scoreContainer > p{
+    background-color:#EFFFF6;
+    color: #91C0AA;
+
+    padding: 10px;
+    object-fit:contain;
+    margin-top: 15px;
+    width: 130px;
+  }
+  .scoreContainer h2{
+    font-weight: 700;
+  }
+  .scoreContainer b{
+    margin-top: 10px;
+    margin-top: 15px;
+  }
+.btn-dark{
+      padding: 3px 10px 2px 10px;
+      border-radius: 0px;
+}
+.slideItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between; /* Or space-between, space-evenly, etc. */
+    gap: 20px; /* works in modern browsers */
+ 
+}
+
+.bugger{
+  display: none;
+}
+/* end of score */
+
+
+/* top schools Design */
+#centeruni{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.schools{
+  flex:1 1 calc(33.333% - 40px);
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.logoandSchoolName img{
+  width:100%;
+  object-fit: cover;
+}
+.cover{
+  display: flex;
+  gap: 10px;
+}
+.logoImage img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50;
+  margin-top: 10px;
+}
+.logoText .schoolname{
+  font-size: 120%;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.logoText a{
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: 700;
+}
+#hideen{
+  display:none;
+  text-decoration:none;
+  
+}
+#hideen button{
+  background-color: darkgreen;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+#hideen button:hover{
+  background-color:#FFB000;
+}
+/* end of Schools */
+.registerAgain{
+  background-color: darkgreen;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.registerAgain:hover{
+  background-color:#FFB000;
+}
+.registerAgainLink{
+  color: #ffff;
+  text-decoration: none;
+}
+
+/* text Over image */
+.messageNews{
+  text-align: center;
+  font-weight: 800;
+}
+.flexJAmbimage{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+
+.jambExam1{
+  position: relative;
+  width:60%;
+
+}
+.messageNewsinfo1{
+  position: absolute;
+  top: 20%;
+  left:10px;
+  display: none;
+  font-weight: 800;
+  color:
+  #000080;
+ 
+}
+
+.jambExam1:hover .messageNewsinfo1{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:flex-start;
+align-items: center;
+
+}
+.jambExam1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.jambExam1:hover img{
+ filter: blur(2px);
+ opacity: 0.7;
+}
+/* ................................2 */
+
+ .jambExam2{
+   position: relative;
+   width: 30%;
+   flex-grow: 1;
+
+ }
+ .messageNewsinfo2{
+   position: absolute;
+   top: 20%;
+   left:10px;
+   display: none;
+   font-weight: 800;
+   color:
+   #000080;
+ }
+ 
+ .jambExam2:hover .messageNewsinfo2{
+   display: flex;
+   flex-direction: column;
+   justify-content:center;
+   align-items:flex-start;
+
+ 
+ }
+ .jambExam2 img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+ }
+ .jambExam2:hover img{
+  filter: blur(2px);
+  opacity: 0.7;
+ }
+
+ /* ................................... */
+ .jambExam3{
+  position: relative;
+  width: calc(33.33% -10px);
+  flex-grow: 1;
+  flex-shrink: 1;
+
+
+}
+.messageNewsinfo3{
+  position: absolute;
+  top: 20%;
+  left:10px;
+display: none;
+  font-weight: 800;
+  color:
+  #000080;
+}
+
+.jambExam3:hover .messageNewsinfo3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+  text-align: center;
+
+}
+.jambExam3 img{
+ width:100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 4px;
+}
+.jambExam3:hover img{
+ filter: blur(2px);
+ opacity: 0.7;
+}
+/* ................................... */
+.jambExam4{
+  width: calc(33.33% -10px);
+  flex-grow: 1;
+  flex-shrink: 1;
+
+}
+.messageNewsinfo4{
+  position: absolute;
+  top: 50%;
+  color: #fff;
+display: none;
+}
+
+.jambExam4:hover .messageNewsinfo4{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  text-align: center;
+
+}
+.jambExam4 img{
+ width:100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 4px;
+}
+.jambExam4:hover img{
+ filter: blur(2px);
+}
+/* ................................... */
+.jambExam5{
+  position: relative;
+  width: calc(33.33% -10px);
+  flex-grow: 1;
+  flex-shrink: 1;
+
+
+}
+.messageNewsinfo5{
+  position: absolute;
+  top: 20%;
+  left:10px;
+  display: none;
+
+  font-weight: 800;
+  color:
+  #000080;
+}
+
+.jambExam5:hover .messageNewsinfo5{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:flex-start;
+  text-align: center;
+
+}
+.jambExam5 img{
+ width:100%;
+ height: 100%;
+ object-fit: cover;
+ border-radius: 4px;
+}
+.jambExam5:hover img{
+ filter: blur(2px);
+ opacity: 0.7;
+}
+/* ................................... */
+.messageNews2{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+/* end  */
+/* ...................................form  */
+.messageNews2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.mailButton > input{
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #1aec75;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: aliceblue;
+  outline: none;
+}
+.mailButton input[type="submit"]{
+width: 200px;
+color: #fff;
+background-color:darkgreen;
+border: 1px solid darkgray;
+font-weight: 900;
+}
+.mailButton{
+  display:flex;
+
+
+}
+/* end of form */
+
+/* footer */
+.footerContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color:#009442;
+  color: #fff;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#personalLInk{
+  color: #fff;
+  font-weight: 800;
+
+}
+.logoFooter{
+width:calc(25% - 40px);
+flex-grow: 1;
+padding-left: 10px;
+flex-shrink: 1;
+}
+.links{
+  width:calc(25% - 40px);
+flex-grow: 1;
+flex-shrink: 1;
+}
+.about{
+  width:calc(25% - 40px);
+  flex-grow: 1;
+  flex-shrink: 1;
+  }
+  .reachUS{
+    width:calc(25% - 40px);
+   
+    flex-shrink: 1;
+    }
+.links li{
+  list-style: none;
+  margin-bottom: 15px;
+
+}
+.links a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.links a:hover{
+  color: #FFB000;
+}
+.about a:hover{
+  color: #FFB000;
+}
+.reachUs a:hover{
+  color: #FFB000;
+}
+.about li{
+  list-style: none;
+  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+.about a{
+text-decoration: none;
+color: #fff;
+font-weight: 300;
+
+}
+.about li{
+  list-style: none;
+  margin-bottom: 15px;
+}
+.about a{
+text-decoration: none;
+color: #fff;
+font-weight: 300;
+}
+
+.reachUs li{
+  list-style: none;
+  margin-bottom: 15px;
+} 
+
+.reachUs a{ 
+text-decoration: none;
+color: #fff;
+font-weight: 300;
+padding-right: 10px;
+
+}
+/* ......................End of Footer */
+.why-jamb-account {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #333;
+}
+
+.why-jamb-account h2 {
+  color: #004d00;
+  font-size: 2em;
+  margin-bottom: 15px;
+
+}
+
+.why-jamb-account ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-jamb-account li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+
+/* POERTAL PAGE CODE DESIGN */
+.application{
+  width: 100%;
+  background-image:url("/images/fiverr.jpg");
+  height:50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+ 
+}
+.apply{
+  background-color: darkgreen;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.apply:hover{
+  background-color: #FFB000;
+}
+.getCrendentials{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  padding:40px 20px 60px 20px ;
+  gap: 10px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.824);
+  border-radius: 10px;
+  
+
+}
+.getCrendentials h3{
+  color: rgb(0, 0, 0)
+}
+.getCrendentials button{
+  padding: 12px;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color:#009442;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+.getCrendentials button:hover{
+  background-color: #FFB000;
+}
+.getCrendentials input{
+  padding: 12px;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.getCrendentials a{
+  text-decoration: none;
+  color: #FFB000;
+}
+.getCrendentials a:hover{
+  color: darkgreen;
+}
+
+.newsUPdate{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+}
+
+.logoText{
+  width:calc(50%);
+  margin-top: 40px;
+  font-weight: 800;
+ /* black with 60% opacity */
+ 
+
+  color: white;
+}
+.informationGather{
+  width:calc(50%);
+  margin-top:40px;
+}
+.downLogin{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color:#009442;
+  color: #fff;
+  padding-top: 20px;
+}
+
+/* the User Register page Design Code */
+#centeralizedRegister{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  box-shadow: 2px 2px 5px 5px #009442;
+}
+#centeralizedRegister:hover{
+  box-shadow: 2px 2px 5px 5px  #FFB000;
+}
+#bodyColor{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/slide2.jpg"); 
+  width: 100%; 
+  height: 100vh;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+.topSpace{
+display: flex;
+align-items: center;
+height: 100vh;
+}
+.sectionRegister{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.dOrigin{
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+
+}
+
+.d1{
+  width: calc(15.0%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-grow: 1;
+
+}
+
+.d1 h4{
+  font-weight: 800;
+  color: #009442;
+}
+
+
+.d2{
+  width: calc(45.0%);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+ 
+
+}
+.d2 .twoDetails{
+  display: flex;
+  gap: 10px;
+}
+.twoDetails input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 2px;
+  background-color: aliceblue;
+  outline: none;
+}
+.twoDetails2 select{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 2px;
+  background-color: aliceblue;
+  outline: none;
+}
+
+#phoneNumber{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 2px;
+  background-color: aliceblue;
+  outline: none;
+}
+.twoDetails2 input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 2px;
+  background-color: aliceblue;
+  outline: none;
+}
+.genderLine{
+  display: flex;
+  margin-top: 10px;
+  gap: 15px;
+}
+.circleRadio{
+  transform: scale(1.5);
+}
+
+.d3{
+  width: calc(25.0%);
+  flex-grow: 1;
+}
+
+.d3 img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+ 
+}
+.lineUnderLine{
+}
+.btnDelete{
+  display:flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 5px;
+}
+.btnDelete button{
+  background-color: darkgreen;
+  color: #fff;
+  padding: 2px 8px 2px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.nextBrn{
+  display: flex;
+  align-items: flex-end;
+  justify-content:flex-end;
+  margin-bottom: 20px;
+}
+
+.nextBrn button{
+   background-color: darkgreen;
+    color: #fff;
+    padding: 5px 18px 5px 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  
+}
+.nextBrn button:Hover{
+  color: #fff;
+  background-color: #FFB000;
+}
+/* ..................The End OF the Code for the User Register Page */
+
+/* Error Message from Password */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* rendering the Ejs Output */
+.messagePassed{
+  color: #fff;
+  padding: 10px;
+  background-color: #3f2d05;
+  text-align: center;
+}
+.infoMessage{
+  color: #fff;
+  animation-name: blinking;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+
+  animation-timing-function: linear;
+  font-weight: 800; 
+}
+@keyframes blinking {
+ 
+  0% { color: #fff; }
+  50% {transform: translateX(30px); }
+  100% { color: #fff; }
+  
+  
+  
+}
+/* end of the Ejs */
+
+
+  /* Mobile View */
+  @media (max-width: 966px) { /*  768*/
+    .nav-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      position: fixed;
+      display: none;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background:#fff;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 20px;
+      transition: right 0.3s ease-in-out;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+    .nav-links.close{
+      display: none;
+    }
+    #hideen {
+      display: flex;
+    }
+    .menuList{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 40px;
+      gap: 40px;
+    }
+    .menuList a{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+    }
+  
+    .nav-links.show {
+      right: 0;
+    }
+    .auth-buttons{
+      display: none;
+    }
+    .bugger{
+      display: flex;
+    }
+  
+    
+  
+    .auth-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .close-btn {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      font-size: 2.5rem;
+      color: darkgreen;
+    }
+    .logoFooter{
+      width:calc(50% - 40px);
+    flex-grow: 1;
+    flex-shrink: 1;
+    }
+    .links{
+      width:calc(50% - 40px);
+    flex-grow: 1;
+    flex-shrink: 1;
+    }
+    .about{
+      width:calc(50% - 40px);
+      flex-grow: 1;
+      flex-shrink: 1;
+      }
+      .reachUs{
+        width:calc(50% - 40px);
+      flex-grow: 1;
+      flex-shrink: 1;
+      }
+      .footerContainer{
+        
+      }
+      .why-jamb-account{
+        margin-top: 180px;
+      }
+
+/* the login page Responsiveness  */
+
+.logoText{
+  width:calc(100%);
+  margin-top: 40px;
+}
+.informationGather{
+  width:calc(100%);
+  margin-top:40px;
+}
+/* end of The loginpage Responsiveness */
+/* the responsiveness for the Form page */
+.d1{
+  width: calc(50.0%);  
+
+}
+.d2{
+  width: calc(50.0%); 
+}
+.d3{
+  width: calc(100.0%);
+}
+/* end of thr form page */
+
+
+  }
+  @media (max-width: 992px) {
+    .schools {
+      flex: 1 1 calc(45% - 40px);
+    }
+    .scoreContainer{
+
+      flex:1 1 calc(45% -40px);
+
+    }
+    .jambExam1{
+      position: relative;
+      width:50%;
+    
+    }
+    .jambExam2{
+      flex-grow: 1;
+    }
+  }
+  @media (max-width: 768px) {
+    .schools {
+      flex: 1 1 calc(100% - 40px);
+    }
+    .scoreContainer{
+
+      flex:1 1 calc(100% -40px);
+
+    }
+    .jambExam3{
+    width: calc(40%);
+    flex-grow: 1;
+    }
+    .jambExam4{
+      width: calc(40%);
+        flex-grow: 1;
+      }
+      .jambExam5{
+        width: calc(40%);
+       display: none;
+       /* Under Contruction..............................................................Contruction */
+        
+        }
+        .jambExam5 img{
+          width:100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+         }
+
+         .messageNewsinfo5{
+          position: absolute;
+          top: 20%;
+          left:10px;
+          display: none;
+        
+          font-weight: 800;
+          color:
+          #000080;
+        }
+        .messageNewsinfo1, .messageNewsinfo2, .messageNewsinfo3, .messageNewsinfo4, .messageNewsinfo5{
+          position: absolute;
+          top: 20%;
+          left:10px;
+          display: none;
+        
+          font-weight: 800;
+          font-size: 80%;
+          color:
+          #000080;
+        }
+
+        .mailButton{
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0;
+        
+        
+        }.mailButton > input{
+          width: 400px;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #1aec75;
+          margin-bottom: 10px;
+          margin-top: 2px;
+          background-color: aliceblue;
+          outline: none;
+        }
+        .logoFooter{
+          width:calc(100%);
+        flex-grow: 1;
+        flex-shrink: 1;
+        }
+        .links{
+        width:calc(100%);
+        flex-grow: 1;
+        flex-shrink: 1;
+        }
+        .about{
+          width:calc(100%);
+          flex-grow: 1;
+          flex-shrink: 1;
+          }
+          .reachUS{
+          width:calc(100%);
+          flex-grow: 1;
+          flex-shrink: 1;
+          
+          }
+         
+          .footerContainer{
+            padding: 20px;
+            
+          
+         
+          }
+  }

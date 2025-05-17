@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" rel="image/x-icon" href="/images/icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STEch CBT Platform</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+
+  <!-- boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+   <!-- End of botsrap -->
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+    <header>
+
+   
+    <nav class="navbar">
+      <div class="logo">STec||</div>
+    
+  
+      <div class="nav-links" id="navLinks">
+        <div class="close-btn" id="closeMenu">&times;</div>
+        <div class="menuList" >
+        
+        <a href="#">Home</a></li>
+         <a href="#">About Us</a>
+       <a href="#">News & Events</a>
+        <a href="#">Resouces</a>
+        <a href="#">Contact Us</a>
+       <a href="#" id="hideen">
+          <button>Log in to Portal</button>
+        </a>
+       
+     </div>  
+      </div>
+      <div class="auth-buttons">
+ <a href="accessExam"><button>Log in to Portal</button></a> 
+        </div>
+        <div class="bugger">
+          ☰
+        </div>
+    </nav>
+</header>
+
+
+
+<main>
+    <!-- the info For the jamb section -->
+    <section>
+        <div id="centeralized">
+          <%  if(locals.infoMessage){ %>
+            <div class="messagePassed">
+            <p class="infoMessage"><%=infoMessage%></p>
+            <a href="/registerCandidate" class="registerAgainLink"> <button class="registerAgain">Use Another Email</button></a>
+          </div>
+          <%} %>
+          
+        <div class="jambinfo"> 
+            <h1><span class="colorAdd">JAMB:</span> <span>Enabling Dreams</span></h1>
+            <p>JAmbs help student achive their Dream of Higher Education</p>
+            <div id="btnflex">
+           <a href="/registerCandidate"> <button type="button" class="btn btn-primary">Register Now</button> </a>
+
+          <a href="#">  <button type="button" class="btn btn-light">Learn More</button></a> 
+        </div>
+
+        </div>
+    </div>
+ 
+   
+
+    <!--End of the info -->
+
+    <!-- caurosel -->
+    <div id="centeralized">
+        <!-- <div style="margin-top: 15px;">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="slide1.jpg" class="" alt="first graduating student slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="slide2.jpg" class="" alt="woman image slide 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="slide3.jpg" class="" alt="last image slide">
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+            
+                 
+
+                  
+            
+               <img src="/images/slide1.jpg" alt="" style="width:100%; margin-top: 25px; border-radius: 3px;">
+          
+            </div>
+     <!-- End of carosel -->
+      <div id="centeralized">
+        <h2 class="top">Top Scores In JAMB</h2>
+      </div>
+
+
+     <!-- score list -->
+      <div id="centeralized">
+     <div class="score">
+     
+        <div class="slideItems">
+           
+            <div class="scoreContainer">
+                <h2>2025</h2>
+                <b>Ayomide Emmanuel</b>
+                <p>  Score: 323</p>
+                <br>
+                <button type="button" class="btn btn-dark">
+                    Learn More 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                      </svg>
+                </button>
+    
+    
+            </div>
+            <!-- 2 -->
+            <div class="scoreContainer">
+                <h2>2024</h2>
+                <b>Adedayo Christian</b>
+                <br>
+                <p>  Score: 223</p>
+                <br>
+                <button type="button" class="btn btn-dark">
+                    Learn More 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                      </svg>
+                </button>
+    
+    
+            </div>
+            <!-- 3 -->
+            <div class="scoreContainer">
+                <h2>2023</h2>
+                <b>chris Ololade Jay</b>
+                <p>  Score: 280</p>
+                <br>
+                <button type="button" class="btn btn-dark">
+                    Learn More 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                      </svg>
+                </button>
+    
+    
+            </div>
+            <!-- 4 -->
+            <div class="scoreContainer">
+                <h2>2022</h2>
+                <b>Josephin Olaniyan</b>
+                <p>  Score: 300</p>
+                <br>
+                <button type="button" class="btn btn-dark">
+                    Learn More 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                      </svg>
+                </button>
+    
+    
+            </div>
+
+        </div>
+     </div>
+    </div>
+    <!-- end of score list -->
+     
+<!-- school recognized by jamb -->
+<div id="centeralized">
+  <div id="centeruni">
+
+ 
+ <div class="schools">
+  <div class="topSchoolDesign">
+    <div class="logoandSchoolName">
+      <img src="/images/lagos.jpg" alt="obafemiawolo university" class="logoImage" />
+      
+       <div class="cover">
+
+     
+      <div class="logoImage"> 
+        <img src="/images/logo2.png" alt="oau logo" class="logologo"> 
+       </div>
+      <div class="logoText"> 
+         <p class="schoolname">university Of Lagos<br> (UNILAG)  </p> 
+         <p><a href="#">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg> </a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+ </div>
+ <!-- 2 -->
+ <div class="schools">
+  <div class="topSchoolDesign">
+    <div class="logoandSchoolName">
+      <img src="/images/oau.jpg" alt="obafemiawolo university" class="logoImage" />
+      
+       <div class="cover">
+
+     
+      <div class="logoImage"> 
+        <img src="/images/logo1.png" alt="oau logo" class="logologo"> 
+       </div>
+      <div class="logoText"> 
+         <p class="schoolname">obafemi Awolowo <br> University (OAU)  </p> 
+         <p><a href="#">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg> </a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+ </div>
+<!-- end of 2 -->
+ <!-- ....3 -->
+ <div class="schools">
+  <div class="topSchoolDesign">
+    <div class="logoandSchoolName">
+      <img src="/images/ahm.jpg" alt="obafemiawolo university" class="logoImage" />
+      
+       <div class="cover">
+
+     
+      <div class="logoImage"> 
+        <img src="/images/logo2.png" alt="oau logo" class="logologo"> 
+       </div>
+      <div class="logoText"> 
+         <p class="schoolname">Ahmodu Bello l<br> (ABU)  </p> 
+         <p><a href="#">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg> </a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+ </div>
+
+  <!-- end of 3  -->
+
+  <!-- 4 -->
+   
+   <!-- end of 4 -->
+</div>
+</div>
+<!-- End of scho -->
+
+<!-- news ............................ -->
+<div id="centeralized">
+<div class="FeaturedNews">
+  <div class="messageNews">
+    <h3>Featured News</h3>
+  </div>
+  <div class="flexJAmbimage">    
+          <!-- 1 -->
+    <div class="jambExam1">
+            <img src="/images/jamb.jpg" alt="the jamb office imgae i">
+            <div class="messageNewsinfo1">
+              <p>Direct Entry, UtME candidates to sit for same Examinations hencforth JAMB </p>
+
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="jambExam2">
+            <img src="/images/jambEntrance.jpg" alt="the jamb office imgae i">
+            <div class="messageNewsinfo2">
+              <p>Ui provides Alternative solution for student with low Jamb Score</p>
+
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="jambExam3">
+            <img src="/images/jamblogo.jpg" alt="image of jamb meeting">
+            <div class="messageNewsinfo3">
+              <p>Student Crisis to support recreation of returning students into Versities</p>
+
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="jambExam3">
+            <img src="/images/meeting.jpg" alt="image of jamb meeting">
+            <div class="messageNewsinfo3">
+              <p>Abia Leads as Jamb Regsiter over 1.5m Student for POST UTME </p>
+
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="jambExam5">
+            <img src="/images/exam.jpg" alt="image of jamb meeting">
+            <div class="messageNewsinfo5">
+              <p>Jamb Release UTME Results Today</p>
+
+            </div>
+          </div>
+
+          </div>
+  
+
+
+</div>
+<div class="messageNews2">
+  <button type="button" class="btn btn-dark">Read More  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg> </button>
+
+</div>
+<div class="messageNews2">
+ <h3>subscribe to Jamb Bulleetin</h3>
+ <p>Get Weekly Updates, tips and tutorial on Jamb</p>
+
+
+   <form action="#" method="post">
+    <div class="mailButton">
+    <input type="email" name="email" id="email" placeholder="Email Address">
+    <input type="submit" name="Subscribe Now" id="submit" value="Subecribe Now">
+    </div>
+   </form>
+
+</div>
+</div>
+ <!-- End Of News ...................... -->
+
+
+    </section>  
+</main>
+  <footer>
+    <div id="centeralized">
+<div class="footerContainer">
+<div class="logoFooter">
+  STec||
+  <p>&copy;Copyright 2025</p>
+</div>
+<div class="about">
+  <li><a href="#" id="personalLInk">About Us</a></li>
+  <li><a href="#">mission</a></li>
+  <li><a href="#">Vission</a></li>
+  <li><a href="#">Our Mandate</a></li>
+  <li><a href="#">Meet the Regsirar</a></li>
+
+</div>
+<div class="links">
+  <li><a href="#" id="personalLInk">Quick liks</a></li>
+  <li><a href="#">E-FAcility</a></li>
+  <li><a href="#">Sylabus System</a></li>
+  <li><a href="#">Centre Support Sysytem</a></li>
+  <li><a href="#">Centre Admission Processing</a></li>
+  <li><a href="#">Jamb Report System</a></li>
+</div>
+<div class="reachUs">
+  <li><a href="#" id="personalLInk">Contact Us</a></li>
+  <li><a href="tel:08029059707">phone: +2348129059707, +2348133189963</a></li>
+</div>
+
+</div>
+
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> 
+    <script>
+        
+    const navToggle = document.querySelector('.bugger');
+    const navLinks = document.querySelector('.nav-links');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.add("active");
+       });
+  
+          closeBtn.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+     });
+
+         // Hide menu when clicking outside of it
+  document.addEventListener('click', function (e) {
+    if (
+      navLinks.classList.contains('active') &&
+     !navLinks.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      navLinks.classList.remove('active');
+   }
+   });
+    </script>
+  </body>
+  </html>

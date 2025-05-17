@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #USED_COLOR{
+    color: #004225
+    #F5F5DC
+    #FFB000
+    #FFCF9D
+    ;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+
+   
+  }
+  .centeralized{
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+  }
+  .headingInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .personalColor{
+    color: #004225;
+  }
+  .shapeYear{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 40px;
+    position: relative;
+  }
+  .whiteShape{
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 120px;
+    padding: 20px;  
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius:none;
+    
+  }
+  .shapeYear h1{
+    font-weight: 800;
+    line-height: 10px;
+    letter-spacing: 5px;
+ 
+  }
+  #cbtLogo{
+
+  }
+  .brandlogoImg{
+    width: 200px;
+    height: auto;
+  }
+  #identification{
+
+  }
+
+  #identification h1{
+font-weight: 800;
+
+  }
+  .PersonalDetails{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .PersonalDetails h2{
+    color:#fff; 
+    padding: 10px;
+  background-color: rgb(0, 0, 0);
+    border-right: 10px solid #004225;
+    border-left: 10px solid #004225;
+    border-bottom: 15px solid #fff;
+  }
+  .profileImage{
+    width: 200px;
+    height: 500;
+  }
+  .profileImage img{
+    width: 100%;
+    height: 500;
+   
+  }
+  .examinationDetails{
+    margin-top: 15px;
+
+  }
+  .examinationDetails h2{
+    color:#fff; 
+    padding: 10px;
+
+    background-color: rgb(0, 0, 0);
+    border-right: 10px solid #004225;
+    border-left: 10px solid #004225;
+    border-bottom: 15px solid #fff;
+  
+  }
+  .subject{
+    margin-top: 15px;
+
+  }
+  .subject h2{
+color:#fff; 
+padding: 10px;
+  background-color: rgb(0, 0, 0);
+    border-right: 10px solid #004225;
+    border-left: 10px solid #004225;
+    border-bottom: 15px solid #fff;
+}
+.choiceOfSchool{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    flex-wrap: wrap;
+
+}
+.firstChoice{
+    width:calc(50% -50px)
+}
+.secondChoice{
+      width:calc(50% -50px)
+}
+.thirdChoice{
+    width: calc(50% -50px);
+}
+.fourthChoice{
+        width: calc(50% -50px);
+}
+.qr{
+    margin-top: 15px;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.note{
+    width: calc(50%);
+}
+.note h2{
+    background-color: rgb(0, 0, 0);
+    border-right: 10px solid #004225;
+    border-left: 10px solid #004225;
+    border-bottom: 15px solid #fff;
+    color: #fff;
+    display: inline-block;
+}
+.qrIMg{
+   width: calc(50%);
+   display: flex;
+   justify-content: flex-end;
+ 
+}
+.qrIMg img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.saveBtn{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+.saveBtn button{
+    color: #fff;
+    background-color: #FFB000;
+    padding:8px 20px 8px 20px;
+    font-weight: 800;
+    text-align: center;
+    border: none;
+
+
+}
+.saveBtn button:hover{
+    color: #F5F5DC;
+    background-color: #004225;
+}
+@media print {
+  .centeralized, .PersonalDetails, .examinationDetails, .choiceOfSchool, .qr {
+    page-break-inside: avoid;
+  }
+}
+@media print {
+  button {
+    display: none;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

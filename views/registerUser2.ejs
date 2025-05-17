@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" rel="image/x-icon" href="/images/icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STEch CBT Platform</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+
+  <!-- boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+   <!-- End of botsrap -->
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body id="bodyColor">
+
+  
+        <form action="/secondregistration2" method="post" >
+            <!-- The First FormLine List  -->
+             <div class="topSpace">
+
+           
+<div id="centeralizedRegister">
+    <%  if(locals.infoMessage) { %>
+      <div class="messagePassed">
+        <p class="infoMessage"> <%=infoMessage %></p>
+    </div>  
+  <%  } %>
+    
+    <div class="dOrigin">
+        <div class="d1">
+            <h4>Personal Information</h4>
+            <p>Tell us more about yourself</p>
+        </div>
+        <div class="d2">
+            <div class="twoDetails">
+                <div class="DateOFBirthSection">
+                   <label for="dateOFbirth">Date of Birth</label>
+                   <input type="date" name="date" id="dateOFbirth" required>
+                     </div> 
+                      <div class="GenderSection">
+                       <label for="gender">Gender</label>
+                       <div class="genderLine">
+
+                      <label for="male" style="font-weight: 700;">Male</label>
+                     <input type="radio" name="gender" class="circleRadio" value="male" required> 
+                     <label for="Female" style="font-weight: 700;">Female</label>
+                     <input type="radio"  name="gender" class="circleRadio" value="Female">
+                    </div>
+                 </div> 
+               </div>
+                   <div class="twoDetails2">
+                       <label for="address">Address</label>
+                   <input type="text" name="registerAddess" id="address" required>
+  
+               </div>
+        </div>
+        <div class="3">
+            <div class="lineUnderLine">
+
+            
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" name="phoneNUmber" id="phoneNumber" required>
+            </div>
+        </div>
+    </div>
+<hr>
+<div class="nextBrn">
+<button>Next</button>
+</div>
+</form>
+</div>
+
+</div>
+
+
+  </body>
+  </html>

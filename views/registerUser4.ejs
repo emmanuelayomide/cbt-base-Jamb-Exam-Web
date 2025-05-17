@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" rel="image/x-icon" href="/images/icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STEch CBT Platform</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+
+  <!-- boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+   <!-- End of botsrap -->
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body id="bodyColor">
+
+  
+        <form action="#" method="Post">
+            <!-- The First FormLine List  -->
+             <div class="topSpace">
+
+           
+<div id="centeralizedRegister">
+<%  if(locals.infoMessage) { %>
+        <div class="messagePassed">
+          <p class="infoMessage"> <%=infoMessage %></p>
+       
+      </div>  
+    <%  } %>
+
+    <div class="dOrigin">
+        <div class="d1">
+            <h4>School Of Choice</h4>
+            <p>Select and Manage Your Choice of School</p>
+        </div>
+        <div class="d2">
+            <div class="twoDetails">
+         <div class="nameSection">
+            <label for="first Choice">First Choice</label>
+            <input type="text" name="firstChoice" id="firstChoice" autofocus  required>
+            <input type="text" name="firstChoice" id="firstChoice" autofocus placeholder="Course" required>
+    
+              </div> 
+               <div class="surnameSection">
+                <label for="secondchoice">Second Choice</label>
+              <input type="text" name="secondchoice" id="secondchoice" autofocus>
+              <input type="text" name="secondchoice" id="secondchoice" autofocus placeholder="course" required>
+          </div>
+        </div>
+         
+        </div>
+        <div class="d3">
+            <div class="empty">
+                <label for="thridchice">Third Choice</label>
+            <input type="text" name="thirdchoice" id="phoneNumber" required>
+            <input type="text" name="thirdchoice" id="phoneNumber" required>
+    
+        </div>
+        </div>
+         <div class="d3">
+            <div class="empty">
+                <label for="thridchice">Fourt Choice</label>
+            <input type="text" name="thirdchoice" id="phoneNumber" required>
+            <input type="text" name="thirdchoice" id="phoneNumber" required>
+    
+        </div>
+        </div>
+
+
+      <div class="d3">
+            <div class="empty">
+                <label for="thridchice">local Gov Area</label>
+            <select name="localGvArea" id="local">
+                <option value="">Select Your Local Goverment Area</option>
+                <% if(localGvt){%>
+                <% localGvt.forEach(local =>{ %>
+<option value="<%=local %>"><%=local %></option>
+               <% }) %>
+                   
+                
+
+              <%  } else { %>
+<option disabled value="">cant Load local governt Area</option>
+             <% } %>
+            </select>
+        </div>
+        </div>  
+    </div>
+    
+<hr>
+<div class="nextBrn">
+   <a href="registerUser4.html"> <button>Next</button></a>
+</div>
+</form>
+</div>
+
+</div>
+
+
+  </body>
+  </html>

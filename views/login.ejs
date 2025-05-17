@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" rel="image/x-icon" href="/images/icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STEch CBT Platform</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+
+  <!-- boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+   <!-- End of botsrap -->
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+    <header>
+
+   
+    <nav class="navbar">
+      <div class="logo">STec||</div>
+    
+  
+      <div class="nav-links" id="navLinks">
+        <div class="close-btn" id="closeMenu">&times;</div>
+        <div class="menuList" >
+        
+        <a href="#">Home</a></li>
+         <a href="#">About Us</a>
+       <a href="#">News & Events</a>
+        <a href="#">Resouces</a>
+        <a href="#">Contact Us</a>
+       <a href="#" id="hideen">
+          <button>Write Exam</button>
+        </a>
+       
+     </div>  
+      </div>
+      <div class="auth-buttons">
+          <button>Write Exam</button>
+        </div>
+        <div class="bugger">
+          ☰
+        </div>
+    </nav>
+</header>
+
+
+
+<main>
+    
+
+
+<section>
+ <div class="application">
+    <div id="centeralized">
+ 
+    <div class="newsUPdate">
+        <div class="logoText">
+       <h1> Stec||</h1>
+       <p>Ready to take the next step? Create your
+         JAMB account to register for exams,
+          check your scores, and stay updated
+           on your admission journey — all in
+            one place!</p>
+
+            <button class="apply">Apply Now</button>
+        </div>
+        <div class="informationGather">
+            <form action="#" method="post">
+    <div class="getCrendentials">
+    <h3 class="loginText">Login</h3>
+    <input type="text" name="registrationNumber" id="registrationNumber" placeholder="user ID/Reg.No" autofocus required>
+    <input type="password" name="registrationPassword" id="registrationPassword" placeholder="password" autofocus required>
+    <button>Sign In</button>
+    <a href="#">Forgort Password ?</a>
+    
+    </div>
+                
+            </form>
+     
+    
+        </div>
+
+    </div>
+   
+</div>
+
+ </div>
+ <div>
+  
+        <div id="centeralized">
+  <section class="why-jamb-account">
+    
+        <h2>Why Create a JAMB Account?</h2>
+        <p>Creating your JAMB account is the first step to accessing all services on the JAMB platform. With an account, you can:</p>
+        <ul>
+          <li>✔️ Register for UTME and Direct Entry exams</li>
+          <li>✔️ Check and print your results</li>
+          <li>✔️ Track your admission status</li>
+          <li>✔️ Access your admission letter and change of course form</li>
+        </ul>
+      </section>
+    </div>
+      
+</div>
+</section>
+<footer class="downLogin">
+    <marquee behavior="" direction="bi-arrow-right">
+        <p class="smartMove"> Every Registered Users will be Provided with a Novel to read so has to register for the Exam, please be informed that There will no be room for same users Writing Exam in Multiple times  </p>
+    </marquee>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> 
+    <script>
+        
+    const navToggle = document.querySelector('.bugger');
+    const navLinks = document.querySelector('.nav-links');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.add("active");
+       });
+  
+          closeBtn.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+     });
+
+         // Hide menu when clicking outside of it
+  document.addEventListener('click', function (e) {
+    if (
+      navLinks.classList.contains('active') &&
+     !navLinks.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      navLinks.classList.remove('active');
+   }
+   });
+    </script>
+  </body>
+  </html>
