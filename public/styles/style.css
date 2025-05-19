@@ -736,6 +736,40 @@ align-items: center;
   color: #fff;
 
 }
+#bodyColor2{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/page2.jpg"); 
+  width: 100%; 
+  height: 100vh;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+
+#bodyColor3{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/page3.jpg"); 
+  width: 100%; 
+  height: 100vh;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+
+#bodyColor4{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/page4.jpg"); 
+  width: 100%; 
+  height: 100vh;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+
+
 .topSpace{
 display: flex;
 align-items: center;
@@ -879,6 +913,15 @@ height: 100vh;
 .nextBrn button:Hover{
   color: #fff;
   background-color: #FFB000;
+}
+
+.lga{
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  
 }
 /* ..................The End OF the Code for the User Register Page */
 

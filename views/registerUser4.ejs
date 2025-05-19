@@ -18,10 +18,10 @@
    <!-- End of botsrap -->
   <link rel="stylesheet" href="/styles/style.css" />
 </head>
-<body id="bodyColor">
+<body id="bodyColor4">
 
   
-        <form action="#" method="Post">
+        <form action="/thirdregistration4" method="Post">
             <!-- The First FormLine List  -->
              <div class="topSpace">
 
@@ -43,42 +43,95 @@
             <div class="twoDetails">
          <div class="nameSection">
             <label for="first Choice">First Choice</label>
-            <input type="text" name="firstChoice" id="firstChoice" autofocus  required>
-            <input type="text" name="firstChoice" id="firstChoice" autofocus placeholder="Course" required>
-    
+            <input type="text" name="firstChoice" id="firstChoice" list="unischool" autofocus  required placeholder="university Name">
+           <datalist id="unischool">
+                <% if (locals.uniNames){ %>
+ <% uniNames.forEach((schoolname)=>{ %>
+          <option value="<%=schoolname.name%>">
+                            
+           <% }) %>
+              <%  } %>
+           
+               </datalist>
+     <input type="text" name="firstChoiceSchool" id="firstChoice" list="unicourse" autofocus  required placeholder="Course Of Studies">
+               <datalist id="unicourse">
+                <% if (locals.universitycourses){ %>
+ <% universitycourses.forEach(function (courseuni){ %>
+          <option value="<%=courseuni%>">
+                            
+           <% }) %>
+              <%  } %>
+           
+               </datalist>
               </div> 
                <div class="surnameSection">
                 <label for="secondchoice">Second Choice</label>
-              <input type="text" name="secondchoice" id="secondchoice" autofocus>
-              <input type="text" name="secondchoice" id="secondchoice" autofocus placeholder="course" required>
-          </div>
+              <input type="text" list="polyname" name="secondchoice" id="secondchoice" autofocus placeholder="polytechnic name">
+               <datalist id="polyname">
+                <% if (locals.polyNames){ %>
+ <% polyNames.forEach((polylistname)=>{ %>
+          <option value="<%=polylistname.name%>">
+                            
+           <% }) %>
+              <%  } %>
+           
+               </datalist>
+
+
+
+              <input type="text" list="polycourse" name="secondChoiceSchool" id="secondchoice" autofocus placeholder="course" required>
+           <datalist id="polycourse">
+                <% if (locals.polytechniccourses){ %>
+ <% polytechniccourses.forEach(function (polycourse){ %>
+          <option value="<%=polycourse%>">
+                            
+           <% }) %>
+              <%  } %>
+           
+               </datalist>
+          
+            </div>
         </div>
          
         </div>
         <div class="d3">
             <div class="empty">
                 <label for="thridchice">Third Choice</label>
-            <input type="text" name="thirdchoice" id="phoneNumber" required>
-            <input type="text" name="thirdchoice" id="phoneNumber" required>
+            <input type="text" list="collegename" name="thirdchoice" id="phoneNumber" required placeholder="colleges">
+             <datalist id="collegename">
+                <% if (locals.collegeNames){ %>
+ <% collegeNames.forEach((collegename)=>{ %>
+          <option value="<%=collegename.name%>">
+                            
+           <% }) %>
+              <%  } %>
+           
+               </datalist>
+          
+          
+            <input type="text" list="colegecourse" name="thirdChoiceSchool" id="phoneNumber" required placeholder="Course of Studies">
     
+              <datalist id="colegecourse">
+                <% if (locals.collegecourses){ %>
+ <% collegecourses.forEach(function (colegecourse){ %>
+          <option value="<%=colegecourse%>">
+                            
+           <% }) %>
+              <%  } %>
+           
+               </datalist>
+          
         </div>
         </div>
-         <div class="d3">
-            <div class="empty">
-                <label for="thridchice">Fourt Choice</label>
-            <input type="text" name="thirdchoice" id="phoneNumber" required>
-            <input type="text" name="thirdchoice" id="phoneNumber" required>
-    
-        </div>
-        </div>
+        
 
 
       <div class="d3">
             <div class="empty">
                 <label for="thridchice">local Gov Area</label>
-            <select name="localGvArea" id="local">
+            <select name="localGvArea" id="local" class="lga" required>
                 <option value="">Select Your Local Goverment Area</option>
-                <% if(localGvt){%>
+                <% if(locals.localGvt){%>
                 <% localGvt.forEach(local =>{ %>
 <option value="<%=local %>"><%=local %></option>
                <% }) %>
@@ -95,7 +148,7 @@
     
 <hr>
 <div class="nextBrn">
-   <a href="registerUser4.html"> <button>Next</button></a>
+ <button>Complete Regsitration</button>
 </div>
 </form>
 </div>
