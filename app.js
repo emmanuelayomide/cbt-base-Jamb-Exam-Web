@@ -7,16 +7,20 @@ import env from 'dotenv';
 import session from 'express-session';
 import axios from 'axios';  
 import bcrypt from "bcryptjs";
+import passport from 'passport';
+import { Strategy } from 'passport-local';
 
 
 app.use(session({ 
-    secret:"emmm",
+    secret:"mysecrete",
     resave: false,
     saveUninitialized: true
 }))
 // using the pubic file styles and images
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 env.config();
 
 const db = new pg.Client({
@@ -63,6 +67,7 @@ app.post("/firstregistration1", async (req, res)=>{
      } else{
         const approved = await db.query("INSERT INTO info1 (firstname, lastname, mail) VALUES ($1, $2, $3) RETURNING *",
         [firstname, lastname, email]);
+  // Rendering the users Data
 console.log(approved.rows) // Rendering the users Data
 const idNumber = approved.rows[0].id;
 req.session.idNumber = idNumber;
@@ -142,11 +147,17 @@ app.post("/secondregistration2", async (req, res)=>{
 
 })
 app.get('/texting', async (req, res) => {
-   res.render("registeruser4.ejs")
-
+res.render("registeruser4.ejs")
 
 
   });
+
+// loging user form date verification
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/dashbaord",
+    failureRedirect: "/accessExam"
+}))
+
 
 
 // The third registration info Data collected
@@ -606,7 +617,23 @@ res.render("registeruser4.ejs", {
 
 })
 
+// this is the login page
+app.get("/login", (req, res)=>{
+res.render("login.ejs")
+})
+
 // last form data collected
+app.get("/dashbaord", (req, res)=>{
+    if(req.isAuthenticated()){
+        res.render("usersSlip.ejs")
+    } else{
+        
+        res.redirect("/login")
+    }
+
+})
+
+
 
 app.post("/thirdregistration4", async (req, res)=>{
 
@@ -632,20 +659,50 @@ const localGvt = req.body["localGvArea"]
 
 //   inserting the data into the database
 try{
-//      TEXT,
-//  TEXT,
-//  TEXT,
-//  TEXT,
-//  TEXT,
-//  TEXT,
+
  const userId = parseInt ( req.session.idNumber);
 
  const userlastInfo = await db.query("INSERT INTO info4 (studentId, firstChoice, firstSchool, secondChoice, secondSchool, thirdChoice, thirdSchool, localGvArea) VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING *",
     [userId, firstChoice, uniChoosen, secondChoice, polyChoosen, thirdChoice, collegeChoosen, localGvt]
  )
-console.log(userlastInfo.rows[0])
+       const result  = await db.query (`
+  SELECT 
+    info1.id,
+    info1.firstname,
+    info1.lastname,
+    info1.mail,
 
-res.render("usersSlip.ejs")
+    info2.dates,
+    info2.gender,
+    info2.phoneNumber,
+    info2.address,
+
+    info3.username,
+    info3.stateorigin,
+    info3.passwords,
+
+    info4.firstChoice,
+    info4.firstSchool,
+    info4.secondChoice,
+    info4.secondSchool,
+    info4.thirdChoice,
+    info4.thirdSchool,
+    info4.localGvArea
+
+  FROM info1
+  LEFT JOIN info2 ON info1.id = info2.studentId
+  LEFT JOIN info3 ON info1.id = info3.studentId
+  LEFT JOIN info4 ON info1.id = info4.studentId
+  WHERE info1.id = $1;
+`, [userId]);
+console.log(result)
+ const user = result.rows[0];
+console.log(userlastInfo.rows[0])
+req.logIn(user, (err)=>{
+res.redirect("/dashbaord")
+})
+
+// res.render("usersSlip.ejs")
 } catch(err){
     console.log(err.message);
     res.render("index.ejs", {
@@ -667,7 +724,75 @@ console.log("the local government area is " + localGvt)
 
 
 })
+// verifyying users with there crenditails passport
+passport.use("local", new Strategy ( { usernameField: "email", passwordField: "password" }, async function verify(email, password, cb) {
+   
+    console.log(email)
 
+    console.log(password);
+    try{
+       const result  = await db.query (`
+  SELECT 
+    info1.id,
+    info1.firstname,
+    info1.lastname,
+    info1.mail,
+
+    info2.dates,
+    info2.gender,
+    info2.phoneNumber,
+    info2.address,
+
+    info3.username,
+    info3.stateorigin,
+    info3.passwords,
+
+    info4.firstChoice,
+    info4.firstSchool,
+    info4.secondChoice,
+    info4.secondSchool,
+    info4.thirdChoice,
+    info4.thirdSchool,
+    info4.localGvArea
+
+  FROM info1
+  LEFT JOIN info2 ON info1.id = info2.studentId
+  LEFT JOIN info3 ON info1.id = info3.studentId
+  LEFT JOIN info4 ON info1.id = info4.studentId
+  WHERE info1.mail = $1;`,
+  [email]);
+const passwordForm = result.rows[0].passwords;
+console.log(passwordForm)
+console.log(result.rows[0])
+if (result.rows.length>0){
+const user = result.rows[0]
+    bcrypt.compare(password, passwordForm, (err, valid)=>{
+      if(err){
+ return cb(err);
+      } else if(valid){
+        return cb(null, user)
+       } else{
+        return cb(null, false)
+       }
+    })
+
+} else{
+return cb ("user not found")
+}
+
+
+    } catch(err){
+console.log(err.message);
+    }
+}))
+
+
+passport.serializeUser((user, cb)=>{
+cb(null, user)
+})
+passport.deserializeUser((user, cb)=>{
+    cb(null, user)
+})
 app.listen(port, (req, res)=>{
     console.log(`Server is running on port ${port}`);
 })
